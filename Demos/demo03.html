@@ -6,71 +6,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./reset.css">
-  <title>flexbox-demo02</title>
+  <title>flexbox-demo03</title>
 </head>
 
 <body>
   <div class="container">
     <div class="item red">A</div>
-    <div class="item green">B</div>
-    <div class="item blue">C</div>
   </div>
   <div class="container container-1">
     <div class="item red">A</div>
-    <div class="item green">B</div>
-    <div class="item blue">C</div>
   </div>
   <div class="container container-2">
     <div class="item red">A</div>
-    <div class="item green">B</div>
-    <div class="item blue">C</div>
   </div>
   <div class="container container-3">
     <div class="item red">A</div>
-    <div class="item green">B</div>
-    <div class="item blue">C</div>
   </div>
   <div class="container container-4">
     <div class="item red">A</div>
-    <div class="item green">B</div>
-    <div class="item blue">C</div>
   </div>
   <div class="container container-5">
     <div class="item red">A</div>
-    <div class="item green">B</div>
-    <div class="item blue">C</div>
   </div>
   <div class="container container-6">
     <div class="item red">A</div>
-    <div class="item green">B</div>
-    <div class="item blue">C</div>
   </div>
 </body>
 <style>
+  .container {
+    height: 210px;
+  }
   .container-1 {
-    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .container-2 {
-    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   .container-3 {
-    justify-content: center;
+    align-items: center;
   }
 
   .container-4 {
-    justify-content: space-around;
+    align-items: stretch;
+  }
+  .container-4 > .item {
+    height: auto;
   }
 
   .container-5 {
-    justify-content: space-evenly;
+    align-items: baseline;
   }
 
   .container-6 {
-    justify-content: space-between;
+    align-items: space-between;
   }
-</style>
-</body>
-
-</html>
