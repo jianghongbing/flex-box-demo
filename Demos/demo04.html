@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+  <title>flexbox-demo04</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-1">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-2">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-3">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-4">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-5">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-6">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-7">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-8">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-9">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <div class="container container-10">
+    <div class="item red">1</div>
+    <div class="item red">2</div>
+    <div class="item red">3</div>
+    <div class="item red">4</div>
+    <div class="item red">5</div>
+    <div class="item red">6</div>
+    <div class="item red">7</div>
+    <div class="item red">8</div>
+    <div class="item red">9</div>
+  </div>
+  <style>
+    .container {
+      width: 150px;
+      height: 300px;
+      background: orange;
+      box-sizing: content-box;
+    }
+
+    .container .item {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      flex: none;
+    }
+
+    .container-1 {
+      flex-wrap: wrap;
+    }
+
+    .container-2 {
+      flex-wrap: wrap-reverse;
+    }
+
+    .container-3 {
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+
+    .container-4 {
+      flex-wrap: wrap-reverse;
+      align-content: center;
+    }
+
+    .container-5 {
+      flex-wrap: wrap;
+      align-content: stretch;
+    }
+
+    .container-6 {
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    .container-7 {
+      flex-wrap: wrap;
+      align-content: space-around;
+    }
+
+    .container-8 {
+      flex-wrap: wrap;
+      align-content: space-evenly;
+    }
+
+    .container-9 {
+      flex-wrap: wrap;
+    }
+
+    .container-9>div:nth-child(8) {
+      align-self: flex-end;
+    }
+
+    .container-9>div:nth-child(9) {
+      align-self: center;
+    }
+    .container-10 {
+      flex-wrap: wrap;
+      gap: 10px 15px;
+    }
+  </style>
+</body>
+
+</html>

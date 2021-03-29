@@ -31,34 +31,40 @@
   <div class="container container-6">
     <div class="item red">A</div>
   </div>
+  <style>
+    .container {
+      height: 210px;
+    }
+
+    .container-1 {
+      align-items: flex-start;
+    }
+
+    .container-2 {
+      align-items: flex-end;
+    }
+
+    .container-3 {
+      align-items: center;
+    }
+
+    .container-4 {
+      align-items: stretch;
+    }
+
+    .container-4>.item {
+      height: auto;
+    }
+
+    .container-5 {
+      align-items: baseline;
+    }
+
+    .container-6 {
+      align-items: space-between;
+    }
+  </style>
+
 </body>
-<style>
-  .container {
-    height: 210px;
-  }
-  .container-1 {
-    align-items: flex-start;
-  }
 
-  .container-2 {
-    align-items: flex-end;
-  }
-
-  .container-3 {
-    align-items: center;
-  }
-
-  .container-4 {
-    align-items: stretch;
-  }
-  .container-4 > .item {
-    height: auto;
-  }
-
-  .container-5 {
-    align-items: baseline;
-  }
-
-  .container-6 {
-    align-items: space-between;
-  }
+</html>
