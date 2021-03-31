@@ -5,19 +5,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>flexbox-demo01</title>
+  <title>flexbox-demo05</title>
   <link rel="stylesheet" href="./reset.css">
   <style>
-    .container-1 {
-      flex-direction: column;
+    .container-1 .item:nth-child(1) {
+      flex-grow: 1;
     }
 
-    .container-2 {
-      flex-direction: row-reverse;
+    .container-2 .item {
+      flex-grow: 1;
     }
 
-    .container-3 {
-      flex-direction: column-reverse;
+    .container-3 .item:nth-child(1) {
+      flex-grow: 1;
+    }
+
+    .container-3 .item:nth-child(2) {
+      flex-grow: 2;
+    }
+
+    .container-3 .item:nth-child(3) {
+      flex-grow: 3;
+    }
+
+    .container-4 .item:nth-child(n+2) {
+      flex-grow: 1;
     }
   </style>
 </head>
@@ -43,7 +55,11 @@
     <div class="item green">B</div>
     <div class="item blue">C</div>
   </div>
+  <div class="container container-4">
+    <div class="item red">A</div>
+    <div class="item green">B</div>
+    <div class="item blue">C</div>
+  </div>
 </body>
-
 
 </html>

@@ -5,31 +5,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox-demo07</title>
   <link rel="stylesheet" href="./reset.css">
-  <title>flexbox-demo02</title>
   <style>
-    .container-1 {
-      justify-content: flex-start;
+    .container {
+      height: 110px;
+    }
+    .item {
+      flex-shrink: 0;
+      height: auto;
+      width: auto;
+    }
+    .container-1 .item:nth-child(1) {
+      flex-basis: 100px;
     }
 
-    .container-2 {
-      justify-content: flex-end;
+    .container-2 .item {
+      flex-basis: 100px;
     }
 
-    .container-3 {
-      justify-content: center;
+    .container-3 .item {
+      flex-grow: 1;
+      flex-basis: 100px;
     }
-
-    .container-4 {
-      justify-content: space-around;
+    .container-4 .item {
+      flex-basis: 50%;
+      flex-shrink: 0;
     }
-
-    .container-5 {
-      justify-content: space-evenly;
+    .container-4 .item:nth-child(n+2) {
+      flex-shrink: 1;
     }
-
-    .container-6 {
-      justify-content: space-between;
+    .container-5 .item:nth-child(1) {
+      flex-basis: content;
+    }
+    .container-5 .item:nth-child(n+2) {
+      flex-basis: 100px;
     }
   </style>
 </head>
@@ -61,11 +71,6 @@
     <div class="item blue">C</div>
   </div>
   <div class="container container-5">
-    <div class="item red">A</div>
-    <div class="item green">B</div>
-    <div class="item blue">C</div>
-  </div>
-  <div class="container container-6">
     <div class="item red">A</div>
     <div class="item green">B</div>
     <div class="item blue">C</div>
