@@ -33,6 +33,7 @@
   * nowarp: 不换行展示, 默认值
   * wrap: 换行展示, flex项会沿着交叉轴的地方开始排列
   * wrap-reverse: 换行展示, flex项会交叉轴结束地方开始排列
+* flex-flow: flex-direction 和 flex-wrap的简写
 * align-content: 同align-items功能类似, 不过align-content是以行作为维度来设置在交叉轴上的对齐方式. align-content只对多行flex容器模型有效. 该属性的取值如下: 
   * flex-start: 所有行从交叉轴起点开始填充. 第一行的交叉轴起点边和容器的交叉轴起点边对齐. 接下来的每一行紧跟前一行.
   * flex-end: 所有行从交叉轴末尾开始填充. 最后一行的交叉轴终点和容器的交叉轴终点对齐. 同时所有后续行与前一个对齐.
@@ -48,3 +49,23 @@
 * column-gap: 设置列间距
 * row-gap: 设置行间距
 * gap: column-gap和row-gap的简写
+
+## 定义在flex项中的CSS属性
+
+* flex-grow: 在主轴方向上, flex容器剩余空间(flex容器在主轴上的大小减去所有flex项的大小加起来的大小)分配比例. 它指定了flex容器中剩余空间的多少应该分配给项目. 该属性的值需要大于等于0, 默认为0.
+* flex-shrink: 指定flex项的收缩系数. flex项仅在默认宽度之和大于容器的时候才会发生收缩, 其收缩的大小是依据flex-shrink的值和所有flex项在主轴方向上超过flex容器的长度. 该值为一个非负数, 初始值是1. 
+* flex-basis: 指定flex项在主轴方向上的初始大小. 当设置flex-grow和flex-shrink的值都为0时, 将使用该值来作为flex项的大小并进行布局. flex-basis的取值可以如下
+  * 一个长度值
+  * content: 基于flex项的内容自动调整大小. 
+* flex: flex-grow, flex-shrink和flex-basis的简写. 一般通过该属性来设置里面包含的属性的值. flex的取值可以如下:
+  * initial: flex项会根据自身宽高设置尺寸. 当所有flex项的长度大于flex容器在主轴上的长度时, 它会缩短自身以适应flex容器, 当小于时, 不会伸长并吸收flex容器中的额外自由空间来适应flex容器. 相当于将属性设置为"flex: 0 1 auto", 该值也是flex的默认值.
+  * auto: 元素会根据自身的宽度与高度来确定尺寸, 但是会伸长并吸收flex容器中额外的自由空间, 也会缩短自身来适应flex容器. 这相当于将属性设置为 "flex: 1 1 auto".
+  * none: 元素会根据自身宽高来设置尺寸. 元素不会缩短, 也不会伸长来适应flex容器. 相当于将属性设置为"flex: 0 0 auto"。
+  * 有一个值的时候会有情况: 
+    * 一个无单位数: 相当于 flex: number, 1, 0. 将该值赋值给flex-grow, flex-shrink默认为1, flex-basis默认为0.
+    * 一个带有长度单位的值: 该值会被作为flex-basis的值
+  * 有2个值时, 第一个值为flex-grow的值, 后面一个值有下面的情况
+    * 如果是一个无单位数, 该值会被赋值给flex-shrink
+    * 如果是一个带有带有单位的数, 该值赋值给flex-basis
+  * 有3个值, 分别赋值给flex-grow, flex-shrink和flex-basis
+* order: flex项在布局时的顺序, 默认值为0. 值越小越先布局. 值相同则按照元素出现的顺序先后布局. 
