@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox常用布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 25px;
+      color: white;
+      font-weight: bolder;
+    }
+
+    header,
+    footer {
+      height: 100px;
+      flex: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      background: red;
+    }
+
+    footer {
+      background: blueviolet;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+    }
+    .main-left {
+      width: 30%;
+      background: orangered;
+    }
+    .main-right {
+      flex: 1;
+      background: royalblue;
+    }
+    .main>* {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <header>Header</header>
+    <main class="main">
+      <aside class="main-left">
+        Left
+      </aside>
+      <main class="main-right">
+        Main
+      </main>
+    </main>
+    <footer>
+      Footer
+    </footer>
+  </div>
+</body>
+
+</html>
