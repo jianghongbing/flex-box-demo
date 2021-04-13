@@ -1,6 +1,6 @@
 # 弹性盒子布局中涉及到的基本概念
 
-## flex布局元素
+## flex布局容器
 
 一个html元素的CSS display属性被设置为flex或者inline-flex后, 那么该元素就是flexbox布局容器, 该元素将采用flexbox来布局其内部的直接子元素. 
 
